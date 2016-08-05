@@ -1,0 +1,46 @@
+{
+  "name": "r2d2",
+  "version": "1.0.0",
+  "description": "A modern universal device detection package",
+  "main": "index.js",
+  "scripts": {
+    "build-js": "babel src -d lib --source-maps",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2",
+    "build": "npm run build-js",
+    "browserify": "browserify test/browser/index.js -o test/browser/bundle.js --debug",
+    "test-server": "http-server ./test/browser -p 8888 -o",
+    "test-browser": "npm run build && npm run browserify && npm run test-server",
+    "test": "npm run build && mocha --compilers js:babel-core/register"
+  },
+  "keywords": [
+    "device",
+    "detection",
+    "useragent",
+    "isomorphic",
+    "universal"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.11.4",
+    "babel-plugin-syntax-flow": "^6.8.0",
+    "babel-plugin-transform-class-properties": "^6.10.2",
+    "babel-plugin-transform-flow-strip-types": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0",
+    "flow-bin": "^0.28.0",
+    "mocha": "^2.5.3",
+    "chai": "^1.9.1",
+    "sinon": "^1.10.0",
+    "superagent": "^0.18.0",
+    "browserify": "^4.1.6",
+    "http-server": "^0.6.1"
+  },
+  "dependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.8.0",
+    "babel-polyfill": "^6.9.1"
+  },
+  "browser": {
+    "./lib/device/index.js": "./lib/setter/client_device.js"
+  },
+  "author": "Joris Hermans",
+  "license": "ISC"
+}
