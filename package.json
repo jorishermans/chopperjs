@@ -1,5 +1,5 @@
 {
-  "name": "r2d2",
+  "name": "chopper.js",
   "version": "1.0.0",
   "description": "A modern universal device detection package",
   "main": "index.js",
