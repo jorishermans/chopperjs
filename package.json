@@ -1,6 +1,6 @@
 {
   "name": "chopper.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A modern universal device detection package",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,8 @@
     "detection",
     "useragent",
     "isomorphic",
-    "universal"
+    "universal",
+    "browser"
   ],
   "devDependencies": {
     "babel-cli": "^6.10.1",
