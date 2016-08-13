@@ -1,5 +1,5 @@
 {
-  "name": "chopper.js",
+  "name": "chopperjs",
   "version": "1.0.1",
   "description": "A modern universal device detection package",
   "main": "index.js",
