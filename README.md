@@ -6,9 +6,9 @@ It detects a mobile, tablet and desktop device in the browser and on the server.
 ## basic example
 
 ```javascript
-var deviceLib = require('chopperjs');
+var chopper = require('chopperjs');
 
-var device = new deviceLib.DeviceDetect();
+var device = new chopper.DeviceDetect();
 console.log(device.isDesktop());
 console.log(device.isTablet());
 console.log(device.isMobile());

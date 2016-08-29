@@ -42,6 +42,8 @@
   "browser": {
     "./lib/device/index.js": "./lib/setter/client_device.js"
   },
+  "homepage": "https://github.com/jorishermans/chopperjs",
+  "bugs": "https://github.com/jorishermans/chopperjs/issues",
   "author": "Joris Hermans",
   "license": "ISC"
 }
