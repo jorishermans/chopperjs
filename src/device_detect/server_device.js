@@ -7,18 +7,15 @@ export class DeviceDetect extends DeviceFace {
 
   constructor( opts ) {
     super();
-    var req = opts.req | {headers: []};
-    user_agent = req.headers['user-agent'];
+    let req = opts.req !== undefined ? opts.req : {headers: []};
 
-    let headers = new Map();
-    for (var [key, value] of myMap.entries()) {
-         headers[key] = values;
-    }
+    this.user_agent = req.headers['user-agent'];
+    let headers = req.headers;
 
-    this.init(navigator.userAgent, headers, new LiteDeviceResolver());
+    this.init(this.user_agent, headers, new LiteDeviceResolver());
   }
 
   userAgent() {
-    return user_agent;
+    return this.user_agent;
   }
 }

@@ -1,4 +1,4 @@
-if (window === undefined) {
+if (typeof window === 'undefined') {
   var Device = require("./server_device.js");
 
   module.exports = Device;
